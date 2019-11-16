@@ -1,0 +1,11 @@
+[xfdesktop-version-4.10.3+-rcfile_format]
+4.10.3+=true
+
+[/home/vagrant/asdf]
+row=1
+col=0
+
+[/home/vagrant/hack-linux-installer.sh]
+row=0
+col=0
+

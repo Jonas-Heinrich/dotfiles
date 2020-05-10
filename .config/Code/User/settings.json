@@ -1,13 +1,31 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "telemetry.enableCrashReporter": false,
-    "terraform.telemetry.enabled": false,
-    "telemetry.enableTelemetry": false,
+    "editor.suggestSelection": "first",
+    "editor.trimAutoWhitespace": true,
+
     "files.exclude": {
         "**/.DS_Store": false,
         "**/.git": false,
         "**/.hg": false,
         "**/.svn": false,
         "**/CVS": false
-    }
+    },
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+    //
+    // Themes & Fonts
+    //
+
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "material-icon-theme",
+
+    "editor.fontFamily": "'Hack Nerd Font', 'monospace', monospace",
+    "terminal.integrated.fontFamily": "'Hack Nerd Font', 'monospace', monospace",
+
+    //
+    // Telemetry
+    //
+
+    "telemetry.enableCrashReporter": false,
+    "terraform.telemetry.enabled": false,
+    "telemetry.enableTelemetry": false,
 }

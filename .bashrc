@@ -116,6 +116,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [[ "$TERM" == *rxvt* ]]; then
-  exec zsh
-fi
+exec zsh

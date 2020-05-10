@@ -1,6 +1,4 @@
 {
-    "editor.suggestSelection": "first",
-    "editor.trimAutoWhitespace": true,
 
     "files.exclude": {
         "**/.DS_Store": false,
@@ -20,6 +18,14 @@
 
     "editor.fontFamily": "'Hack Nerd Font', 'monospace', monospace",
     "terminal.integrated.fontFamily": "'Hack Nerd Font', 'monospace', monospace",
+
+    //
+    // Editor Behaviour
+    //
+
+    "editor.suggestSelection": "first",
+    "editor.trimAutoWhitespace": true,
+    "editor.lineNumbers": "relative",
 
     //
     // Telemetry

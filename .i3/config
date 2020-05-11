@@ -20,10 +20,17 @@
 
 # - playerctl
 # - feh
+# - fonts-dejavu
+# - rofi
+# - compton
+# - imagemagick
+# - scrot
 
 #
 # Device Specific Variables
 #
+
+# `xrandr --current` for more information
 
 set $monitor_1 "eDP-1"
 set $monitor_2 "HDMI-1"
@@ -63,6 +70,13 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10: ﱘ "
 
+# Colors based on Arc Dark
+set $bg-color 	         #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
 #
 # Meta
 #
@@ -85,6 +99,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 exec_always feh --bg-scale /home/$USER/Pictures/wallpaper.jpg
 exec_always xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-2 --off
 
+exec compton -f
+
 #exec firefox
 
 #
@@ -95,7 +111,7 @@ exec_always xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate 
 bindsym $mod+Return exec i3-sensible-terminal
 
 # D-Menu
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run 
 
 #
 # Default Window Mapping
@@ -117,7 +133,7 @@ assign [class="Code"] $ws3
 #
 
 # Lock PC
-bindsym $mod+Control+l exec i3lock
+bindsym $mod+Control+l exec "$HOME/.bin/scripts/lock.sh $HOME/Pictures/lock.png"
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -140,7 +156,7 @@ bindsym $mod+Control+6 move workspace to output $monitor_6
 bindsym $mod+Control+7 move workspace to output $monitor_7
 bindsym $mod+Control+8 move workspace to output $monitor_8
 bindsym $mod+Control+9 move workspace to output $monitor_9
-bindsym $mod+Control+1 move workspace to output $monitor_10
+bindsym $mod+Control+0 move workspace to output $monitor_10
 
 #
 # Standard Key Bindings
@@ -264,9 +280,28 @@ bindsym $mod+r mode "resize"
 # Visual
 #
 
-font pango:monospace 8
+font pango:DejaVu Sans ExtraLight 11
+
+
+# Window Colors
+client.focused          $bg-color           $bg-color          $text-color          #00ff00
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          #00ff00
+
+hide_edge_borders both
 
 bar {
-        status_command i3status
+        status_command i3blocks -c ~/.i3/i3blocks.conf
+        font pango: Hack Nerd Font
+
+        colors {
+		background $bg-color
+	    	separator #757575
+		#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	}
 }
 

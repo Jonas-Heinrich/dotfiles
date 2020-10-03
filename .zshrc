@@ -93,6 +93,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -117,3 +120,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$USER'
+
+# i3c = 'i3config'
+alias i3c='vim ~/.i3/config'
+alias i3cs='cat ~/.i3/config | grep'
+

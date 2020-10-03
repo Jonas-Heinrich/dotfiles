@@ -32,8 +32,8 @@
 
 # `xrandr --current` for more information
 
-set $monitor_1 "eDP-1"
-set $monitor_2 "HDMI-1"
+set $monitor_1 "DP-0"
+set $monitor_2 "DP-4"
 set $monitor_3 ""
 set $monitor_4 ""
 set $monitor_5 ""
@@ -96,10 +96,15 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Note: This only gets executed on the first login to i3
 
-exec_always feh --bg-scale /home/$USER/Pictures/wallpaper.jpg
-exec_always xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-2 --off
+exec --no-startup-id compton -f -b
+exec --no-startup-id feh --bg-scale /home/$USER/Pictures/wallpaper.jpg
 
-exec compton -f
+# This has currently been moved to `.xprofile`, because otherwise the screens get artifacts
+#exec --no-startup-id xrandr --output DP-1 --off \
+#                            --output DP-0 --mode 1920x1200 --pos 0x0    --primary \
+#                            --output DP-3 --off \
+#                            --output DP-4 --mode 1920x1200 --pos 1920x0 --rotate right \
+#                            --output HDMI-1 --off
 
 #exec firefox
 
@@ -108,7 +113,7 @@ exec compton -f
 #
 
 # Terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec rxvt-unicode
 
 # D-Menu
 bindsym $mod+d exec rofi -show run 
@@ -128,6 +133,10 @@ assign [class="Chromium"] $ws1
 # IDEs / Editors
 assign [class="Code"] $ws3
 
+# Music
+assign [class="Spotify"] $ws10
+for_window [class="Spotify"] move to workspace $ws10
+
 #
 # Custom Key Bindings
 #
@@ -141,10 +150,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle       # mute sound
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPlay  exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext  exec playerctl next
+bindsym XF86AudioPrev  exec playerctl previous
 
 # Move workspace to monitor
 bindsym $mod+Control+1 move workspace to output $monitor_1
@@ -281,7 +290,6 @@ bindsym $mod+r mode "resize"
 #
 
 font pango:DejaVu Sans ExtraLight 11
-
 
 # Window Colors
 client.focused          $bg-color           $bg-color          $text-color          #00ff00

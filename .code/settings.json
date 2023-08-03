@@ -1,0 +1,113 @@
+{
+    // =====Editor=====
+    "editor.rulers": [
+        100
+    ],
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.insertSpaces": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.lineNumbers": "on",
+    "editor.accessibilitySupport": "off",
+    "editor.tabSize": 4,
+    "editor.cursorStyle": "line",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "editor.suggestSelection": "first",
+    // =====Explorer=====
+    "explorer.confirmDelete": false,
+    "explorer.sortOrder": "default",
+    // =====Workbench=====
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.activityBar.visible": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/node_modules/*/**": true
+    },
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    // =====Other=====
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        ".build/**": true,
+        "out*/**": true,
+        "i18n/**": true,
+        "extensions/**/out/**": true,
+        "**/target": true,
+        "*.min.js": true
+    },
+    "typescript.suggest.paths": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    // =====Languages=====
+    "C_Cpp.clang_format_fallbackStyle": "Visual Studio",
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.cStandard": "c17",
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[latex]": {
+        "editor.defaultFormatter": "dprint.dprint"
+    },
+    "python.languageServer": "Default",
+    "python.showStartPage": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "dprint.dprint"
+    },
+    // =====Extensions=====
+    "extensions.ignoreRecommendations": false,
+    "cSpell.userWords": [
+        "ylim"
+    ],
+    "cmake.configureOnOpen": false,
+    "bookmarks.saveBookmarksInProject": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    // =====Misc=====
+    "telemetry.telemetryLevel": "off",
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.openRepositoryInParentFolders": "never"
+}

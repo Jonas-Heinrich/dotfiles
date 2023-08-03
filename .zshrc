@@ -95,7 +95,10 @@ plugins=(
   # Copy with progress bar
   cp
 
+  # Completion
+  brew
   pip
+  rust
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -72,6 +72,8 @@
     "C_Cpp.clang_format_fallbackStyle": "Visual Studio",
     "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": true,
     "[c]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
@@ -84,6 +86,9 @@
     "[latex]": {
         "editor.defaultFormatter": "dprint.dprint"
     },
+    "[markdown]": {
+        "editor.defaultFormatter": "dprint.dprint"
+    },
     "python.languageServer": "Default",
     "python.showStartPage": false,
     "[python]": {
@@ -92,11 +97,11 @@
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer"
     },
+    "[toml]": {
+        "editor.defaultFormatter": "dprint.dprint",
+    },
     "[terraform]": {
         "editor.defaultFormatter": "hashicorp.terraform"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "dprint.dprint"
     },
     // =====Extensions=====
     "extensions.ignoreRecommendations": false,
@@ -106,8 +111,22 @@
     "cmake.configureOnOpen": false,
     "bookmarks.saveBookmarksInProject": true,
     "latex-workshop.view.pdf.viewer": "tab",
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning"
+    ],
     // =====Misc=====
     "telemetry.telemetryLevel": "off",
     "security.workspace.trust.untrustedFiles": "open",
-    "git.openRepositoryInParentFolders": "never"
+    "git.openRepositoryInParentFolders": "never",
+    "peacock.affectActivityBar": true,
+    "peacock.affectDebuggingStatusBar": false,
+    "peacock.affectEditorGroupBorder": false,
+    "peacock.affectPanelBorder": false,
+    "peacock.affectSashHover": false,
+    "peacock.affectSideBarBorder": false,
+    "peacock.affectStatusAndTitleBorders": false,
+    "peacock.affectStatusBar": false,
+    "peacock.affectTabActiveBorder": false,
+    "peacock.affectTitleBar": false,
 }
